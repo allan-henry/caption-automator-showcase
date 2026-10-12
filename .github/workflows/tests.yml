@@ -1,0 +1,36 @@
+name: Synthetic caption review tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Synthetic CLI demonstration
+        run: python caption_review_demo.py fixtures/synthetic_game.json
+
+  secret_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full clean repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan for committed credentials
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
