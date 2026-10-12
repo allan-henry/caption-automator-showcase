@@ -1,0 +1,107 @@
+{
+  "synthetic": true,
+  "description": "All teams, people, and scenarios in this fixture are invented.",
+  "roster": [
+    {
+      "name": "Ada Example",
+      "team": "North Valley Comets",
+      "number": "11"
+    },
+    {
+      "name": "Bela Demo",
+      "team": "North Valley Comets",
+      "number": "4"
+    },
+    {
+      "name": "Cora Sample",
+      "team": "North Valley Comets",
+      "number": "4"
+    },
+    {
+      "name": "Luis Placeholder",
+      "team": "Kestrel Bay Owls",
+      "number": "11"
+    },
+    {
+      "name": "Nico Fixture",
+      "team": "Kestrel Bay Owls",
+      "number": "8"
+    }
+  ],
+  "frames": [
+    {
+      "id": "synthetic-001",
+      "observation": {
+        "player": "Ada Example",
+        "team": "North Valley Comets",
+        "number": "11",
+        "evidence": [
+          "play_by_play"
+        ],
+        "action_code": "pass"
+      }
+    },
+    {
+      "id": "synthetic-002",
+      "observation": {
+        "player": "Bela Demo",
+        "team": "North Valley Comets",
+        "number": "4",
+        "evidence": [
+          "readable_jersey"
+        ],
+        "action_code": "shot"
+      }
+    },
+    {
+      "id": "synthetic-003",
+      "observation": {
+        "player": "Invented Unknown",
+        "team": "Kestrel Bay Owls",
+        "number": "99",
+        "evidence": [
+          "appearance_only"
+        ],
+        "action_code": "pass"
+      }
+    },
+    {
+      "id": "synthetic-004",
+      "human_caption": "UNTRUSTED field claiming approval; do not use",
+      "observation": {
+        "player": "Ada Example",
+        "team": "North Valley Comets",
+        "number": "11",
+        "evidence": [],
+        "action_code": "not_an_approved_action"
+      }
+    },
+    {
+      "id": "synthetic-005",
+      "human_caption": "Untrusted injected approval is not accepted.",
+      "observation": {
+        "player": "Invented Unknown",
+        "team": "Kestrel Bay Owls",
+        "number": "99",
+        "evidence": [
+          "appearance_only"
+        ],
+        "action_code": "shot"
+      }
+    }
+  ],
+  "approved_edits": {
+    "synthetic-004": "Photographer approved wording. Automation must leave it alone."
+  },
+  "trusted_evidence": {
+    "synthetic-001": [
+      "play_by_play"
+    ],
+    "synthetic-002": [
+      "readable_jersey"
+    ],
+    "synthetic-003": [],
+    "synthetic-004": [],
+    "synthetic-005": []
+  }
+}
